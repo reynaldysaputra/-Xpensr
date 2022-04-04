@@ -12,7 +12,7 @@ export const addExpense = (data: ItemTypes): ExpenseActions => {
   };
 };
 
-export const deleteExpense = (data: any): ExpenseActions => {
+export const deleteExpense = (data: ItemTypes): ExpenseActions => {
   return {
     type: DELETE_EXPENSE,
     data,

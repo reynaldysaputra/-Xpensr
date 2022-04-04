@@ -10,7 +10,7 @@ export interface ItemTypes {
 }
 
 export interface dataItem {
-  item: ItemTypes[];
+  expenseList: ItemTypes[];
   query: string;
 }
 

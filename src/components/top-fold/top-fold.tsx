@@ -2,17 +2,17 @@ import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./top-fold.css";
 import { useDispatch } from "react-redux";
-// import { searchExpense } from "../../redux/actions/expenses";
+import { searchExpense } from "../../states/actions/expense";
 
 const TopFold: React.FC = () => {
   const [query, setQuery] = useState("");
   const dispatch = useDispatch();
   const location = useLocation();
 
-  // const handleQuery = (e) => {
-  //   setQuery(e.target.value);
-  //   dispatch(searchExpense(e.target.value));
-  // };
+  const handleQuery = (e: React.FormEvent<HTMLInputElement>) => {
+    setQuery(e.currentTarget.value);
+    dispatch(searchExpense(e.currentTarget.value));
+  };
 
   return (
     <div className="topfold">
@@ -22,8 +22,8 @@ const TopFold: React.FC = () => {
             <i className="fi-rr-search"></i>
             <input
               placeholder="Search for expenses"
-              // value={query}
-              // onChange={(e) => handleQuery(e)}
+              value={query}
+              onChange={(e) => handleQuery(e)}
             />
           </div>
           <Link to="/add-expense">

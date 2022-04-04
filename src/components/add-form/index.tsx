@@ -74,7 +74,7 @@ const AddForm = () => {
         />
       </div>
       <div className="form-item">
-        <label>Amount ₹</label>
+        <label>Amount $</label>
         <input
           placeholder="Enter Amount"
           className="amount-input"
