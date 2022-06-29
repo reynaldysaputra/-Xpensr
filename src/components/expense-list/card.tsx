@@ -21,7 +21,7 @@ const Card: React.FC<ICardProps> = ({ item, notifySuccess }) => {
   return (
     <div
       className="card"
-      style={{ borderRight: `6px solid ${item.category.color}` }}
+      style={{ borderRight: `6px solid ${item.category.color}`}}
     >
       <div className="card-image-container">
         <img
